@@ -1,0 +1,25 @@
+#include <opencv2/core.hpp>
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/calib3d.hpp>
+#include <opencv2/imgproc.hpp>
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+int main(int argc, char *argv[])
+{
+ Mat leftRGB= imread(argv[1],1);
+ Mat rightRGB= imread(argv[2],1);
+
+ cvtColor(leftRGB, left, CV_BGR2GRAY);
+ cvtColor(rightRGB, right, CV_BGR2GRAY);
+
+ // add your code here
+ 
+ cvWaitKey(0);
+ 
+  return 0;
+}
